@@ -7,7 +7,7 @@ Type=simple
 User=standardfile
 Group=standardfile
 WorkingDirectory=/home/standardfile/gitstuff/ruby-server
-ExecStart=/bin/bash -lc 'RAILS_ENV=production bundle exec puma -b 'tcp://127.0.0.0:3000' -C ./config/puma.rb'
+ExecStart=/bin/bash -lc 'RAILS_ENV=production bundle exec puma -C config/puma.rb'
 ExecStop=/bin/bash -lc 'bundle exec pumactl -P tmp/pids/server.pid stop'
 TimeoutSec=30
 RestartSec=15
